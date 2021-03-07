@@ -1,16 +1,17 @@
 import React from "react"
-
+import MenuItem from "../MenuItem"
 
 export default class Menu extends React.Component {
     render() {
         return (
-            <div><p>${this.props.itemPrice}</p>
-                <h2>{this.props.itemName}</h2>
-                <p>{this.props.itemDescription}</p>
-                <p><button>Add to cart</button></p></div>
-                
-        );
-        
+            <div>
+                <h1>{this.props.menuName} List</h1>
+                <hr></hr>
+                <MenuItem {...this.props.menuItems[0]}></MenuItem>
+                <MenuItem {...this.props.menuItems[1]}></MenuItem>
+                <MenuItem {...this.props.menuItems[2]}></MenuItem>
+            </div>
+        )
     }
     
 }
